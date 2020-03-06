@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Provider from '../src/contexts/context'
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
-import {BrowserRouter as Router , Route , Switch} from 'react-router-dom'
+import {HashRouter as Router , Route , Switch} from 'react-router-dom'
 
 //components
 import Contacts from './components/contacts/contacts';
