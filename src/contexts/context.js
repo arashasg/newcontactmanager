@@ -29,24 +29,7 @@ const reducer=(state,action)=>{
 }
 export default class Provider extends Component {
     state={
-        contacts:[{
-            id:"1",
-            name:"arash",
-            email:"arashasgari1378@gmail.com",
-            phone:"44254309"
-        },
-        {
-            id:"2",
-            name:"ali",
-            email:"ali@gmail.com",
-            phone:"11111111"
-        },
-        {
-            id:"3", 
-            name:"majid",
-            email:"majid@gmail.com",
-            phone:"22222222"
-        }],
+        contacts:[],
         dispatch:(action=>{
             this.setState(reducer(this.state,action))
         })  
@@ -61,7 +44,7 @@ export default class Provider extends Component {
         )
     }
     async componentDidMount(){
-        const res=await Axios.get("http://jsonplaceholder.typicode.com/users");
+        const res=await Axios.get("https://jsonplaceholder.typicode.com/users");
         this.setState({contacts:res.data});
     }
 }
