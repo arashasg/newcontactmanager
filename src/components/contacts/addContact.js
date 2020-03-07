@@ -26,7 +26,7 @@ export default class AddContact extends Component {
             return;
         }
         const contact={name:this.state.name,email:this.state.email,phone:this.state.phone}
-        let res=await Axios.post("http://jsonplaceholder.typicode.com/users",contact)
+        let res=await Axios.post("https://jsonplaceholder.typicode.com/users",contact)
         let action={type:"Add_Contact",payload:res.data};
         value.dispatch(action);
         this.setState({

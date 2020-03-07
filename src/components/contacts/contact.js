@@ -12,7 +12,7 @@ class Contact extends Component {
         this.setState({showContactInfo:!this.state.showContactInfo})
     }
     deleteHandler=(action,dispatch)=>{
-        Axios.delete(`http://jsonplaceholder.typicode.com/users/${action.payload}`).then(res=>
+        Axios.delete(`https://jsonplaceholder.typicode.com/users/${action.payload}`).then(res=>
         dispatch(action)
         )
     };
